@@ -1,0 +1,6 @@
+{
+  "BMIWEBURL": "https://www.calculator.net/bmi-calculator.html?ctype=metric",
+  "WEBURL": "https://www.calculator.net/",
+  "APIURL": "https://reqres.in",
+  "CROMEDRIVERPATH" : "G:/Python/Training/Resources/chromedriver.exe"
+}
