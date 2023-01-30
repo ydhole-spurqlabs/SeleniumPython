@@ -8,5 +8,4 @@ class BasePage(object):
         self.implicit_wait = 25
 
 
-# def __init__(self, driver):
-#     return None
+

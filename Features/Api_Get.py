@@ -1,5 +1,4 @@
 import requests
-import json
 
 
 api_url = "https://reqres.in"
@@ -16,3 +15,5 @@ if response.status_code == 200:
 
 else:
     print("Fail")
+
+

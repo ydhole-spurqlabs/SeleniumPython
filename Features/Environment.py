@@ -36,3 +36,6 @@ def after_step(context, step):
 def after_scenario(context, scenario):
     print("After scenario", scenario)
     context.driver.close()
+
+
+

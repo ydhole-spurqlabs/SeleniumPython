@@ -10,3 +10,5 @@ class API_Utility:
         uri = self.api_url+endpoint
         response = requests.request("GET", uri)
         return response
+
+
