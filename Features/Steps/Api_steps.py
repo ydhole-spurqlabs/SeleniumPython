@@ -1,5 +1,5 @@
 from behave import *
-from Utility.API_Utility import API_Utility
+from SeleniumPython.Utility.API_Utility import API_Utility
 use_step_matcher("re")
 
 api_utility = API_Utility()

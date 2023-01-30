@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
 import time
-from Pages.BasePage import BasePage
+from SeleniumPython.Features.Pages.BasePage import BasePage
 
-class BmiPage:
+
+class BmiPage (BasePage):
     def __init__(self, context):
         BasePage.__init__(self, context.driver)
         self.context = context
-
         self.age_xpath = "//input[@id='cage']"
         self.height_xpath = "//input[@id='cheightmeter']"
         self.weight_xpath = "//input[@id='ckg']"
@@ -18,7 +18,6 @@ class BmiPage:
         AgeInput.clear()
         AgeInput.send_keys(Age)
         time.sleep(2)
-
 
     def gender_radio(self, Gender):
         try:

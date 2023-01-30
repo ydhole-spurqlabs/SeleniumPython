@@ -3,7 +3,7 @@ import requests
 
 
 class API_Utility:
-    data = json.load(open("Resources/config.json"))
+    data = json.load(open("SeleniumPython/Resources/config.json"))
     api_url = data['APIURL']
 
     def GET_Call(self,endpoint):
