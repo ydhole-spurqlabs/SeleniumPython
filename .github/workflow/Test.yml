@@ -3,7 +3,7 @@ name: Selenium Python pipeline
 
 on:
   push:
-   branches: ["main"]
+#    branches: ["main"]
 #    schedule:
 #       - cron: '00 12 * * *'
  
