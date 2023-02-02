@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from Pages.BasePage import BasePage
 from Pages.BmiPage import BmiPage
 
-data = json.load(open("SeleniumPython/Resources/config.json"))
+data = json.load(open("Resources/config.json"))
 
 
 def before_scenario(context, scenario):

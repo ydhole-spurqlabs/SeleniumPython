@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 import time
-from SeleniumPython.Features.Pages.BasePage import BasePage
+from Features.Pages.BasePage import BasePage
 
 
 class BmiPage (BasePage):
