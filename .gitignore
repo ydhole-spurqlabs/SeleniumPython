@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# Report Folders
+Report_Html/
+Report_Json/
+reports/

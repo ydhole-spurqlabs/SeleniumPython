@@ -16,7 +16,3 @@ Feature: Create test cases using Selenium with Python to automate below BMI calc
       | 35  | Female  |  160    |  55     | BMI = 21.5 kg/m2|
       | 50  | Male    |  175    |  65     | BMI = 21.2 kg/m2|
       | 45  | Female  |  150    |  52     | BMI = 23.1 kg/m2|
-
-
-
-
