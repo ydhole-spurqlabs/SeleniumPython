@@ -28,7 +28,16 @@ jobs:
     - name: install allure
       run:  npm install -g allure-commandline
       continue-on-error: true
-    
+      
+    - name: logs mail
+      with:
+        emailext attachLog: true
+        body: "${currentBuild.result}: ${BUILD_URL}"
+        compressLog: true
+        replyTo: 'yogesh.dhole@spurqlabs.com'
+        subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
+        to: 'yogesh.dhole@spurqlabs.com'
+        
     - name: run test
       run: behave Features -f allure_behave.formatter:AllureFormatter -o Report_Json
       working-directory: .
@@ -43,11 +52,4 @@ jobs:
           name: HTML reports
           path: Report_Html
       continue-on-error: true
-    - name: logs mail
-      with:
-        emailext attachLog: true
-        body: "${currentBuild.result}: ${BUILD_URL}"
-        compressLog: true
-        replyTo: 'yogesh.dhole@spurqlabs.com'
-        subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
-        to: 'yogesh.dhole@spurqlabs.com'
+    
