@@ -43,3 +43,11 @@ jobs:
           name: HTML reports
           path: Report_Html
       continue-on-error: true
+    - name: logs mail
+      with:
+        emailext attachLog: true
+        body: "${currentBuild.result}: ${BUILD_URL}"
+        compressLog: true
+        replyTo: 'yogesh.dhole@spurqlabs.com'
+        subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
+        to: 'yogesh.dhole@spurqlabs.com'
