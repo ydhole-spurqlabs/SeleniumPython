@@ -33,16 +33,19 @@ class BmiPage (BasePage):
         HeightInput = self.driver.find_element(By.XPATH, self.height_xpath)
         HeightInput.clear()
         HeightInput.send_keys(height)
+        print("height input is entered")
         time.sleep(3)
 
     def weight_input(self, weight):
         WeightInput = self.driver.find_element(By.XPATH, self.weight_xpath)
         WeightInput.clear()
         WeightInput.send_keys(weight)
+        print("weight input is entered")
         time.sleep(3)
 
     def calculatebtn_click(self):
         Calculatebtn = self.driver.find_element(By.XPATH, "//input[@value='Calculate']")
+        print("clicked on calculator btn")
         Calculatebtn.click()
         time.sleep(3)
 
