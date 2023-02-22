@@ -28,7 +28,7 @@ jobs:
     - name: install allure
       run:  npm install -g allure-commandline
       continue-on-error: true
-    
+        
     - name: run test
       run: behave Features -f allure_behave.formatter:AllureFormatter -o Report_Json
       working-directory: .
@@ -43,3 +43,4 @@ jobs:
           name: HTML reports
           path: Report_Html
       continue-on-error: true
+    
