@@ -57,8 +57,6 @@ class BmiPage (BasePage):
             print(Actualresult)
             Expectedresult = expresult
             assert Actualresult == Expectedresult, "Expected Result Matched"
-            print("Assertion passed and result matched")
-            time.sleep(5)
         except:
             self.driver.close()
             assert False, "Expected Result mismatched"
