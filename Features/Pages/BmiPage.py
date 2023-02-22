@@ -62,3 +62,6 @@ class BmiPage (BasePage):
         except:
             self.driver.close()
             assert False, "Expected Result mismatched"
+
+
+        print("git training")
