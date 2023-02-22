@@ -23,6 +23,7 @@ class BmiPage (BasePage):
         try:
             MaleGender = self.driver.find_element(By.XPATH, "//label[normalize-space()='" + Gender + "']")
             MaleGender.click()
+            print("select gender")
             time.sleep(2)
         except:
             FemaleGender = self.driver.find_element(By.XPATH, "//label[normalize-space()='" + Gender + "']")
@@ -30,7 +31,6 @@ class BmiPage (BasePage):
             time.sleep(3)
 
     def height_input(self, height):
-        print("please enter height input")
         HeightInput = self.driver.find_element(By.XPATH, self.height_xpath)
         HeightInput.clear()
         HeightInput.send_keys(height)
