@@ -30,6 +30,7 @@ class BmiPage (BasePage):
             time.sleep(3)
 
     def height_input(self, height):
+        print("please enter height input")
         HeightInput = self.driver.find_element(By.XPATH, self.height_xpath)
         HeightInput.clear()
         HeightInput.send_keys(height)
