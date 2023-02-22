@@ -33,16 +33,19 @@ class BmiPage (BasePage):
         HeightInput = self.driver.find_element(By.XPATH, self.height_xpath)
         HeightInput.clear()
         HeightInput.send_keys(height)
+        print("height input is entered")
         time.sleep(3)
 
     def weight_input(self, weight):
         WeightInput = self.driver.find_element(By.XPATH, self.weight_xpath)
         WeightInput.clear()
         WeightInput.send_keys(weight)
+        print("weight input is entered")
         time.sleep(3)
 
     def calculatebtn_click(self):
         Calculatebtn = self.driver.find_element(By.XPATH, "//input[@value='Calculate']")
+        print("clicked on calculator btn")
         Calculatebtn.click()
         time.sleep(3)
 
@@ -50,8 +53,10 @@ class BmiPage (BasePage):
         try:
             Result = self.driver.find_element(By.XPATH, "//body[1]/div[3]/div[1]/div[4]/div[1]/b[1]")
             Actualresult = Result.text
+            print(Actualresult)
             Expectedresult = expresult
             assert Actualresult == Expectedresult, "Expected Result Matched"
+            print("Assertion passed and result matched")
             time.sleep(5)
         except:
             self.driver.close()
