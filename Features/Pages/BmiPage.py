@@ -50,8 +50,10 @@ class BmiPage (BasePage):
         try:
             Result = self.driver.find_element(By.XPATH, "//body[1]/div[3]/div[1]/div[4]/div[1]/b[1]")
             Actualresult = Result.text
+            print(Actualresult)
             Expectedresult = expresult
             assert Actualresult == Expectedresult, "Expected Result Matched"
+            print("Assertion passed and result matched")
             time.sleep(5)
         except:
             self.driver.close()
