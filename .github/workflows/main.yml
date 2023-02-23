@@ -40,7 +40,7 @@ jobs:
       continue-on-error: true
   
     - uses: actions/upload-artifact@v2
-#       if: ${{ failure() && steps.diff.conclusion == 'failure' }}
+
       with:
           name: HTML reports
           path: Report_Html
